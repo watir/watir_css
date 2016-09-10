@@ -1,5 +1,8 @@
-require "watir_css/version"
+require 'watir-webdriver'
 
-module WatirCss
-  # Your code goes here...
-end
+require 'watir_css/locators/element/selector_builder/css'
+require 'watir_css/version'
+
+Watir.locator_namespace = Css::Locators
+
+WatirCss::Locators::Element::Locator = Watir::Locators::Element::Locator
