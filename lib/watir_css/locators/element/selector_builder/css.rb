@@ -1,10 +1,11 @@
-module Watir
+module WatirCss
   module Locators
     class Element
       class SelectorBuilder
         class CSS
+
           def build(selectors)
-            Watir::Locators::Element::SelectorBuilder::XPath(selectors) unless use_css?
+            return unless use_css?(selectors)
 
             if selectors.empty?
               css = '*'
@@ -56,6 +57,7 @@ module Watir
           def css_escape(str)
             str.gsub('"', '\\"')
           end
+
         end
       end
     end
