@@ -15,7 +15,7 @@ By default Watir converts calls into XPath; this gem will replace XPath calls
 with CSS calls where possible.
 DESCRIPTION_MESSAGE
 
-  spec.homepage      = "https://github.com/titusfortner/watir_css"
+  spec.homepage      = "https://github.com/watir/watir_css"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
