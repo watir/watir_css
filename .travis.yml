@@ -1,4 +1,8 @@
+sudo: false
 language: ruby
 rvm:
-  - 2.3.0
-before_install: gem install bundler -v 1.11.2
+  - 2.4.1
+before_install:
+  - export DISPLAY=:99
+  - sh -e /etc/init.d/xvfb start
+  - export PATH=~/.webdrivers:$PATH
