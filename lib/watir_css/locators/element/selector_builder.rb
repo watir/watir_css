@@ -10,12 +10,12 @@ module WatirCss
         private
 
         def build_wd_selector(selectors)
-          unless selectors.values.any? { |e| e.is_a? Regexp }
-            build_css(selectors) || build_xpath(selectors)
-          end
+          return if selectors.values.any? { |e| e.is_a? Regexp }
+          build_css(selectors) || build_xpath(selectors)
         end
 
         def build_css(selectors)
+          return if selectors.values.any? { |e| e.is_a?(Symbol) || e.is_a?(TrueClass) || e.is_a?(FalseClass)}
           css_builder.build(selectors)
         end
 
