@@ -1,11 +1,10 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'watir_css/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "watir_css"
-  spec.version       = WatirCss::VERSION
+  spec.version       = "0.2.0"
   spec.authors       = ["Titus Fortner"]
   spec.email         = ["titusfortner@gmail.com"]
 
